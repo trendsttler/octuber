@@ -1,0 +1,129 @@
+
+.sign-up-form{
+    background-color: #ffffffd6;
+    border-radius:15px;
+    padding: 20px;
+    color: #333;
+}
+.sign-up-form h2{
+    color: #57CAFF;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+a:hover{
+    text-decoration: underline;
+    color: #57CAFF;
+}
+h1, h2, h3, h4, h5, h6{
+    text-transform: capitalize;
+}
+.self-input{
+    color: #FFF;
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #ffffff00;
+    background-clip: padding-box;
+    border-radius: 50px;
+    border: 1px solid #57CAFF;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.self-input:focus{
+    border-radius: 0px;
+    border: 0px;
+    border-bottom: 1px solid #57CAFF;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(71, 71, 71, 0);
+    font-weight: 600;
+}
+.btn-premium{
+    width: 30%;
+    min-width: 200px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 50px;
+    border: 3px solid #57CAFF;
+    background: transparent;
+    color:#57CAFF;
+    font-weight: 700;
+    transition: .3s;
+    font-size: 17px
+}
+.btn-premium:hover{
+  background-color: #57CAFF;
+  color: white;
+  text-shadow: 1px 1px 1px #8c8a8a;
+  font-weight: 700;
+}
+/* The container */
+.container-input {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-input input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container-input:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-input input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container-input input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-input .checkmark:after {
+    left: 7px;
+    top: 2px;
+    width: 7px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
