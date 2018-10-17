@@ -20,65 +20,77 @@
         <div class="hero-body">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 welcome-container">
+                        <div class="welcome-box">
                         <h1 class="title is-1">
-                    Welcome to MARKSIM<sup>®</sup> STATshop
+                            Welcome to MARKSIM<sup>®</sup> STATshop
                         </h1>
                         <div class="main">
-                    <!-- <div class="form-group ">
-                        <a href="/login" class="btn btn-primary btn-lg btn-block">Login</a>
-                    </div>
-                    <div class="form-group">
-                        <a href="/login" class="btn btn-primary btn-lg btn-block">Register</a>
-                    </div> -->
-                    <div class="field">
-                        <a href="https://develop.marksim.org/auth/linkedin" class="button is-info">
-                            <span class="icon">
-                                <svg class="svg-inline--fa fa-linkedin-in fa-w-14" aria-hidden="true" data-prefix="fab" data-icon="linkedin-in" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M100.3 480H7.4V180.9h92.9V480zM53.8 140.1C24.1 140.1 0 115.5 0 85.8 0 56.1 24.1 32 53.8 32c29.7 0 53.8 24.1 53.8 53.8 0 29.7-24.1 54.3-53.8 54.3zM448 480h-92.7V334.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V480h-92.8V180.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V480z"></path></svg><!-- <i class="fab fa-linkedin-in"></i> -->
-                            </span>
-                            <span>Login with LinkedIn</span>
-                        </a>
-                    </div>
-                    <div class="field">
-                        <a href="https://develop.marksim.org/auth/google" class="button is-danger">
-                            <span class="icon">
-                                <svg class="svg-inline--fa fa-google fa-w-16" aria-hidden="true" data-prefix="fab" data-icon="google" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" data-fa-i2svg=""><path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg><!-- <i class="fab fa-google"></i> -->
-                            </span>
-                            <span>Login with Google</span>
-                        </a>
-                    </div>
+                            <div class="field">
+                                <a href="https://develop.marksim.org/auth/linkedin" class="button is-info">
+                                    <span class="icon">
+                                        <svg class="svg-inline--fa fa-linkedin-in fa-w-14" aria-hidden="true" data-prefix="fab" data-icon="linkedin-in" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M100.3 480H7.4V180.9h92.9V480zM53.8 140.1C24.1 140.1 0 115.5 0 85.8 0 56.1 24.1 32 53.8 32c29.7 0 53.8 24.1 53.8 53.8 0 29.7-24.1 54.3-53.8 54.3zM448 480h-92.7V334.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V480h-92.8V180.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V480z"></path></svg><!-- <i class="fab fa-linkedin-in"></i> -->
+                                    </span>
+                                    <span>Login with LinkedIn</span>
+                                </a>
+                            </div>
+                            <div class="field">
+                                <a href="https://develop.marksim.org/auth/google" class="button is-danger">
+                                    <span class="icon">
+                                        <svg class="svg-inline--fa fa-google fa-w-16" aria-hidden="true" data-prefix="fab" data-icon="google" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" data-fa-i2svg=""><path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg><!-- <i class="fab fa-google"></i> -->
+                                    </span>
+                                    <span>Login with Google</span>
+                                </a>
+                            </div>
                         </div>
-                    </div>
+                        </div>
+                    </div> <!-- col-md-6 -->
+    <!-- form avail in page -->               
                     <div class="col-md-6 ">
-                        <form class="form-group sign-up-form">
-                            <h2>SignUp</h2>
-                            <div>
-                                <p><input type="text" class="self-input mt-3" placeholder="Name"></p>
+                        <div class="login-page">
+                            <div class="form">
+                                <form class="register-form forms">
+                                    <input name="fname" type="text" placeholder="first name" />
+                                    <input name="lname" type="text" placeholder="last name" />
+                                    <input name="email" type="text" placeholder="email" />
+                                    <input name="username" type="text" placeholder="win-code" />
+                                    <input name="password" type="password" placeholder="password" />
+                                    <p class="checkbox-gdpr"><input type="checkbox" >GDPR </p>
+                                    <button type="submit" class="button-login">create</button>
+                                    <p class="other-page">Already registered?
+                                            <a class="log switch" href="#">Sign In</a>
+                                    </p>
+                                </form>
+                                <form class="login-form forms hide">
+                                    <input name="email" type="text" placeholder="email" />
+                                    <input name="password" type="password" placeholder="password" />
+                                    <button type="submit" class="button-login">login</button>
+                                    <p class="other-page">Not registered?
+                                            <a class="reg switch" href="#">Create an account</a>
+                                    </p>
+                                </form>
                             </div>
-                            <div>
-                                <p><input type="email" class="self-input" placeholder="Email"></p>
-                            </div>
-                            <div>
-                                <p><input type="password" class="self-input" placeholder="Password"></p>
-                            </div>
-                            <div>
-                                <p><label class="container-input"> Follow our terms and condition
-                                    <input type="checkbox" checked="checked">
-                                    <span class="checkmark"></span>
-                                  </label></p>
-                            </div>
-                                <p><button class="btn btn-premium">Submit</button></p>
-                        </form>
-                    </div>
-
-     <!-- login page -->
-                
-                    
-
-                </div>           
-            </div>
-        </div>
+                        </div>
+                    </div><!-- col-md-6 -->
+                </div>  <!-- row -->         
+            </div> <!-- container -->
+        </div> <!-- hero-body -->
     </section>
-
-
-</body></html>
+        <script>
+            const regLink = document.querySelector(".reg");
+        const regForm = document.querySelector(".register-form")
+        const logLink = document.querySelector(".log");
+        const logForm = document.querySelector(".login-form")
+        
+        regLink.addEventListener("click", () => {
+          logForm.classList.add("hide");
+          regForm.classList.remove("hide");
+        });
+        
+        logLink.addEventListener("click", () => {
+          regForm.classList.add("hide");
+          logForm.classList.remove("hide");
+        });
+            </script>
+</body>
+</html>

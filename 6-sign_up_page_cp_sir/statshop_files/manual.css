@@ -1,129 +1,115 @@
+.button-container {
+  display: grid; 
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  button {
+    flex: 1;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    background-color: #ff8a16;
+    padding: 5px;
+  }
+  form {
+    width: 50%;
+    justify-self: center;
+    text-align: center;
+  }
+}
 
-.sign-up-form{
-    background-color: #ffffffd6;
-    border-radius:15px;
-    padding: 20px;
-    color: #333;
+.login-page {
+  width: 360px;
+  margin: auto;
 }
-.sign-up-form h2{
-    color: #57CAFF;
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  padding: 45px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
-a{
-    text-decoration: none;
-    color: inherit;
+.form input {
+  font-family: "Lato", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 0.875rem;
 }
-a:hover{
-    text-decoration: underline;
-    color: #57CAFF;
+
+.form input:active {
+  background: #fff02;
 }
-h1, h2, h3, h4, h5, h6{
-    text-transform: capitalize;
+  
+.form button {
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  background-size: 200% auto;
+  font-size: 1rem;
+  transition: 0.5s ease;
+  box-shadow: 0 0 20px #eee;
+  cursor: pointer;
 }
-.self-input{
-    color: #FFF;
-    display: block;
-    width: 100%;
-    height: calc(2.25rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #ffffff00;
-    background-clip: padding-box;
-    border-radius: 50px;
-    border: 1px solid #57CAFF;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+.form button:hover,.form button:active,.form button:focus {
+  background-position: right center;
 }
-.self-input:focus{
-    border-radius: 0px;
-    border: 0px;
-    border-bottom: 1px solid #57CAFF;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgb(71, 71, 71, 0);
-    font-weight: 600;
+.form .other-page {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+  text-align: center;
 }
-.btn-premium{
-    width: 30%;
-    min-width: 200px;
-    padding: 10px 30px 10px 30px;
-    border-radius: 50px;
-    border: 3px solid #57CAFF;
-    background: transparent;
-    color:#57CAFF;
-    font-weight: 700;
-    transition: .3s;
-    font-size: 17px
+.form .other-page a {
+  color: #a6c1ee !important;
+  text-decoration: none;
 }
-.btn-premium:hover{
-  background-color: #57CAFF;
-  color: white;
-  text-shadow: 1px 1px 1px #8c8a8a;
-  font-weight: 700;
+
+.button-login {
+  border-width: 1px;
+  border-radius: 2rem;
+  outline: 0;
 }
-/* The container */
-.container-input {
-    display: block;
+
+form.hide {
+  display: none;
+  transition: all 1s ease;
+}
+.welcome-box{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.checkbox-gdpr input{
+    transform: translateY(10%); 
+    width: 10%;
+}
+.checkbox-gdpr{
+    color: #848484;
     position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
-
-/* Hide the browser's default checkbox */
-.container-input input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+@media screen and (max-width:768px){
+   .welcome-container{
+       position: relative;
+       height: 400px;
+   } 
 }
-
-/* Create a custom checkbox */
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    background-color: #eee;
-}
-
-/* On mouse-over, add a grey background color */
-.container-input:hover input ~ .checkmark {
-    background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
-.container-input input:checked ~ .checkmark {
-    background-color: #2196F3;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-/* Show the checkmark when checked */
-.container-input input:checked ~ .checkmark:after {
-    display: block;
-}
-
-/* Style the checkmark/indicator */
-.container-input .checkmark:after {
-    left: 7px;
-    top: 2px;
-    width: 7px;
-    height: 12px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+@media screen and (max-width:568px){
+    .login-page {
+        width: 95%;
+    }
+    .form {
+      max-width: 95%;
+      padding: 25px;
+    }
 }
