@@ -1,8 +1,8 @@
 .button-container {
   display: grid; 
   grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
-  button {
+  grid-gap: 10px;}
+  .button-container button {
     flex: 1;
     border-width: 0;
     outline: none;
@@ -11,12 +11,13 @@
     background-color: #ff8a16;
     padding: 5px;
   }
-  form {
+  .button-container form {
     width: 50%;
     justify-self: center;
     text-align: center;
+    position: relative;
   }
-}
+
 
 .login-page {
   width: 360px;
