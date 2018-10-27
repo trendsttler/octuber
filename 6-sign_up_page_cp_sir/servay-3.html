@@ -16,6 +16,42 @@
     <link href="./statshop_files/manual.css" rel="stylesheet">
 
     <style>
+        .overlay{
+            background-color: #0000008a;
+            top: 0;
+            left: 0;
+            right:0;
+            bottom:0;
+            z-index: 10000;
+            position: absolute;
+        }
+        .overlay .loder{
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            transform: translate(-50%,-50%);
+            animation: loder 1s infinite;
+            width: 50px;
+            animation-timing-function: linear;
+        }
+        .load-active{
+            display: block;
+        }
+        .fade-load{
+            display: none;
+        }
+        @keyframes loder{
+           0%{      
+               -ms-transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{      
+               -ms-transform: rotate(360deg);
+                -webkit-transform: rotate(360deg); 
+                transform: rotate(360deg);
+            }
+        }
         .button-container {
   display: grid; 
   grid-template-columns: 1fr 1fr;
@@ -62,7 +98,6 @@
 }
 
 .form input:active {
-  background: #fff02;
 }
   
 .form button {
@@ -96,7 +131,7 @@
 
 .button-login {
   border-width: 1px;
-  border-radius: 2rem;
+  border-radius: 0rem;
   outline: 0;
 }
 
@@ -132,43 +167,63 @@ form.hide {
       padding: 25px;
     }
 }
-        .overlay{
-            background-color: #0000008a;
-            top: 0;
-            left: 0;
-            right:0;
-            bottom:0;
-            z-index: 10000;
-            position: absolute;
-        }
-        .overlay .loder{
-            position: absolute;
-            top: 40%;
-            left: 40%;
-            transform: translate(-50%,-50%);
-            animation: loder 1s infinite;
-            width: 50px;
-            animation-timing-function: linear;
-        }
-        .load-active{
-            display: block;
-        }
-        .fade-load{
-            display: none;
-        }
-        @keyframes loder{
-           0%{      
-               -ms-transform: rotate(0deg);
-                -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
-            100%{      
-               -ms-transform: rotate(360deg);
-                -webkit-transform: rotate(360deg); 
-                transform: rotate(360deg);
-            }
-        }
-    </style>
+.suravey-field-link{
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    box-shadow: 0 0 6px #999;
+    margin: 20px;
+    background: #fff;
+}
+.suravey-field-link p{
+    margin-top: 10px;
+    color: #000;
+    font-weight: 600;
+}
+.suravey-field-input{
+    width: 100%;
+}
+.suravey-field-input select{
+    min-width: 250px;
+    max-width: 406px;
+    width: 50%;
+    padding: 5px 10px;
+    margin-top: 20px;
+    border-radius: 0px;
+}
+ 
+.suravey-field-input .next{
+    margin-top: 50px;
+    width: 150px;
+    padding: 10px;
+    background: #209cee;
+    border: 0px;
+    color: white;
+    font-weight: 700px;
+}
+.create-suravey-field{
+    width: 100%;
+}
+
+.create-suravey-field select, input{
+    min-width: 250px;
+    width: 100%;
+    padding: 5px 10px;
+    margin-top: 20px;
+    border-radius: 0px !important;
+}
+.create-suravey-field .next{
+    margin-top: 50px;
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    background: #209cee;
+    border: 0px;
+    color: white;
+    font-weight: 700px;
+}
+ </style>
 
     <script>
         $(document).ready(function(){
@@ -183,88 +238,27 @@ form.hide {
     <section class="hero is-info is-fullheight">
         <div class="hero-body">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-6 welcome-container">
-                        <div class="welcome-box">
-                        <h1 class="title is-1">
-                            Welcome to MARKSIM<sup>®</sup> STATshop
-                        </h1>
-                        <div class="main">
-                            <div class="field">
-                                <a href="https://develop.marksim.org/auth/linkedin" class="button is-info">
-                                    <span class="icon">
-                                        <svg class="svg-inline--fa fa-linkedin-in fa-w-14" aria-hidden="true" data-prefix="fab" data-icon="linkedin-in" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M100.3 480H7.4V180.9h92.9V480zM53.8 140.1C24.1 140.1 0 115.5 0 85.8 0 56.1 24.1 32 53.8 32c29.7 0 53.8 24.1 53.8 53.8 0 29.7-24.1 54.3-53.8 54.3zM448 480h-92.7V334.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V480h-92.8V180.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V480z"></path></svg><!-- <i class="fab fa-linkedin-in"></i> -->
-                                    </span>
-                                    <span>Login with LinkedIn</span>
-                                </a>
+                <p class="display-4">Creat your first servay </p>
+                    <div class="create-suravey-field">
+                        <form class="form-group ">
+                            <div class="row">
+                            <div class="col-md-4">
+                                <input class="form-control" type="text" placeholder="Servay Name"/>
                             </div>
-                            <div class="field">
-                                <a href="https://develop.marksim.org/auth/google" class="button is-danger">
-                                    <span class="icon">
-                                        <svg class="svg-inline--fa fa-google fa-w-16" aria-hidden="true" data-prefix="fab" data-icon="google" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" data-fa-i2svg=""><path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg><!-- <i class="fab fa-google"></i> -->
-                                    </span>
-                                    <span>Login with Google</span>
-                                </a>
+                            <div class="col-md-4">
+                                    <select class="form-control">
+                                            <option>category</option>
+                                            <option>category</option>
+                                    </select>
+                            </div>
+                            <div class="col-md-4">
+                                    <button href="servay-3.html" value="" class="next" style="margin-top:20px;padding:7px;">Creat servay</button>
                             </div>
                         </div>
-                        </div>
-                    </div> <!-- col-md-6 -->
-    <!-- form avail in page -->               
-                    <div class="col-md-6 ">
-                        <div class="login-page">
-                            <div class="form">
-                                <form class="register-form forms">
-                                        <div class="overlay fade-load">
-                                            <div class="overlay text-center">
-                                                <img src="Loader.png" class="loder" >
-                                            </div>
-                                        </div>
-                                    <input name="fname" type="text" placeholder="first name" />
-                                    <input name="lname" type="text" placeholder="last name" />
-                                    <input name="email" type="text" placeholder="email" />
-                                    <input name="username" type="text" placeholder="win-code" />
-                                    <input name="password" type="password" placeholder="password" />
-                                    <p class="checkbox-gdpr"><input type="checkbox" >GDPR </p>
-                                    <button type="submit" id="submit" class="button-login">Create</button>
-                                    <p class="other-page">Already registered?
-                                            <a class="log switch" href="#">Sign In</a>
-                                    </p>
-                                </form>
-                                <form class="login-form forms hide">
-                                        <div class="overlay fade-load">
-                                                <div class="overlay text-center">
-                                                    <img src="Loader.png" class="loder" >
-                                                </div>
-                                        </div>
-                                    <input name="email" type="text" placeholder="email" />
-                                    <input name="password" type="password" placeholder="password" />
-                                    <button type="submit" id="submit" class="button-login">login</button>
-                                    <p class="other-page">Not registered?
-                                            <a class="reg switch" href="#">Create an account</a>
-                                    </p>
-                                </form>
-                            </div>
-                        </div>
-                    </div><!-- col-md-6 -->
-                </div>  <!-- row -->         
-            </div> <!-- container -->
-        </div> <!-- hero-body -->
+                    </form>
+                    </div>
+            </div>
+        </div>
     </section>
-        <script>
-            const regLink = document.querySelector(".reg");
-        const regForm = document.querySelector(".register-form")
-        const logLink = document.querySelector(".log");
-        const logForm = document.querySelector(".login-form")
-        
-        regLink.addEventListener("click", () => {
-          logForm.classList.add("hide");
-          regForm.classList.remove("hide");
-        });
-        
-        logLink.addEventListener("click", () => {
-          regForm.classList.add("hide");
-          logForm.classList.remove("hide");
-        });
-            </script>
 </body>
 </html>
