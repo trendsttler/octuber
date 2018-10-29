@@ -1,0 +1,41 @@
+
+/* premium */
+
+.btn-premium{
+    width: 30%;
+    min-width: 200px;
+    border-radius: 50px;
+}
+.btn-premium:hover{
+  color: white;
+  font-weight: 600;
+  }
+h2, h4{
+    text-transform: capitalize;
+    color:#333;
+}
+.terms{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    opacity: .5;
+}
+.terms-link{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    opacity: 1;
+    margin-left: 5px;
+    text-decoration: none;
+    color: inherit;
+}
+.devider{
+    background: #00c4ff;
+}
+.feature{
+    width: 80%;
+    max-width: 250px;
+}
+a{
+    text-decoration: none;
+}

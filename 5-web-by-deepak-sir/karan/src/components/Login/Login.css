@@ -1,0 +1,51 @@
+
+/* login */
+
+.icon {
+
+    color: #5FBFF9;
+    min-width: 50px;
+    text-align: center;
+    border: 0px;
+    border-bottom: 1px solid #5FBFF9;
+    padding-top: 6px;
+}
+
+.input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-field::placeholder{
+    color:#5FBFF9;
+}
+
+.input-field {
+    width: 100%;
+    outline: none;
+    border-left: 0px;
+    padding-left: 10px;
+    color: #5FBFF9;
+    min-width: 50px;
+    border: 0px;
+    border-bottom: 1px solid #5FBFF9;
+    padding-bottom: 1rem;
+}
+
+.logo-login{
+    font-family: 'Pacifico', cursive;
+    font-weight: 700;
+    font-size: 40px;
+    color: #5FBFF9;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 4px #ddd;
+    margin-top:30px;
+    margin-bottom:80px;
+    
+}
+
+/* .input-field:focus {
+    border: 2px solid #5FBFF9;
+} */
